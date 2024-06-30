@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* box-sizing: border-box;を設定 */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ 
+/* フォントサイズの拡大を防ぐ */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+ 
+/* デフォルトのマージンを削除、作成するCSSの制御を改善するため */
+body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, small, button, time, figure {
+  margin: 0;
+  font: inherit;
+  /* font-size: 100%; */
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+ 
+/* リストのスタイルを削除、これはデフォルトのスタイルが削除されることを示唆します */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+ 
+li, dd {
+    list-style-type: none;
+}
+
+/* bodyのデフォルトを設定 */
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+ 
+/* 見出しのテキスト折り返しをbalanceに設定 */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* classを持たないa要素はデフォルトのスタイルを継承 */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+ 
+/* 画像の扱いを簡単にする */
+img,
+picture {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border: none;
+}
+ 
+/* inputやbuttonなどのfontは継承 */
+input, button,
+textarea, select {
+  font: inherit;
+}
+ 
+/* rows属性のないtextareasが小さくならないようにする */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+ 
+/* アンカーされている要素には余分なスクロールマージンが必要 */
+:target {
+  scroll-margin-block: 5ex;
+}
