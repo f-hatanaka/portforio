@@ -336,7 +336,7 @@ h1 {
 /* profile */
 .about__profile {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto calc(40 * 100vw / 750);
 }
 .about__profile-title {
   font-size: calc(24 * 100vw / 750);
@@ -376,6 +376,9 @@ h1 {
 }
 
 /* profile */
+.about__profile {
+  margin: 0 auto min(calc(40 * 100vw / 1200), 40px);
+}
 .about__profile-title {
   font-size: min(calc(28 * 100vw / 1200), 28px);
   margin-bottom: min(calc(16 * 100vw / 1200), 16px);
